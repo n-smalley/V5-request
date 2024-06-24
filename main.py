@@ -3,6 +3,7 @@ import win32com.client as win32
 import os
 import json
 from datetime import datetime
+from time import sleep
 
 d = r'c:\Users\nathansmalley\OneDrive - Cook County Government\General - DBMS Private - Budget\FY2025\V5 Report'
 
@@ -17,14 +18,16 @@ while True:
     except KeyError:
         print('Unknown Office Number\n')
     else:
+        print()
         break
 for i in data:
-    inp = input(f'{i.upper()}: {data[i]} ')
+    inp = input(f' {i.upper()}: {data[i]} ')
     if inp:
-        data[i] = [j for j in inp.replace(', ','').split(',')]
-        print(f'{i.upper()}: {data[i]}')
+        data[i] = [j for j in inp.replace(', ',',').split(',')]
+        print(f' {i.upper()}: {data[i]}')
 fltr = data['office']
 
+print('\nCLEANING V5')
 # Get most recent file
 files = [os.path.join(d,f) for f in os.listdir(d) if os.path.isfile(os.path.join(d,f))]
 most_recent = max(files,key=os.path.getmtime)
@@ -40,8 +43,10 @@ if fltr:
 # export df to excel
 path = os.path.join(os.getcwd(),'outgoing',f'e{key.capitalize()} V5 {datetime.today().strftime('%m.%d.%y')}.xlsx')
 df.to_excel(path,index=False)
+print(' Success')
 
 # create email object and send
+print('SENDING EMAIL')
 outlook = win32.Dispatch('outlook.application')
 
 mail = outlook.CreateItem(0)
@@ -50,7 +55,7 @@ for i in data:
     if data[i] == []:
         data[i] = None
     data[i] = f'{data[i]}'.replace("['",'').replace("']",'').replace("', '",'; ')
-    
+
 mail.To = data['to']
 mail.CC = data['cc']
 mail.Subject = f'{data['name']} V5 report'
@@ -58,3 +63,8 @@ mail.Body = f'Please find report as of {date} attached. Let me know if you need 
 mail.Attachments.Add(path)
 
 mail.Send()
+print(' Success')
+sleep(2)
+
+# clean outgoing
+os.remove(path)
