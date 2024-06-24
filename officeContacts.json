@@ -1,0 +1,86 @@
+{
+    "1026":{
+        "name":["Department of Administrative Hearings"],
+        "office":["1026"],
+        "to":["Marc.Hamilton@cookcountyil.gov","Ryan.OLeary@cookcountyil.gov"],
+        "cc":[]
+        },
+    "1390":{
+        "name":["Public Administrator"],
+        "office":["1390"],
+        "to":["mary.tomas@cookcountyil.gov","Leah.Jakubowski@cookcountyil.gov"],
+        "cc":[]
+        },
+    "1335":{
+        "name":["Clerk of the Circuit Court"],
+        "office":["1335"],
+        "to":["mzrosas@cookcountycourt.com","sakusek@cookcountycourt.com"],
+        "cc":["aanegron@cookcountycourt.com"]
+        },
+    "1478":{
+        "name":["Chief Judge (Bureau)"],
+        "office":["1280","1300","1305","1310","1312","1313","1326","1440"],
+        "to":["John.Hourihane@cookcountyil.gov","Stephanie.Hall@cookcountyil.gov"],
+        "cc":[]
+        },
+    "1280":{
+        "name":["Adult Probation"],
+        "office":["1280"],
+        "to":["michael.rohan@cookcountyil.gov"],
+        "cc":[]
+        },
+    "1300":{
+        "name":["Judiciary"],
+        "office":["1300"],
+        "to":["John.Hourihane@cookcountyil.gov"],
+        "cc":[]
+        },
+    "1305":{
+        "name":["Public Guardian"],
+        "office":["1305"],
+        "to":["jessica.garcia2@cookcountyil.gov"],
+        "cc":[]
+        },
+    "1310":{
+        "name":["name of the Chief Judge"],
+        "office":["1310"],
+        "to":["John.Hourihane@cookcountyil.gov","Stephanie.Hall@cookcountyil.gov"],
+        "cc":[]
+        },
+    "1312":{
+        "name":["Forensic Clinical Services"],
+        "office":["1312"],
+        "to":["John.Hourihane@cookcountyil.gov"],
+        "cc":[]
+        },
+    "1313":{
+        "name":["Social Services"],
+        "office":["1313"],
+        "to":["janice.teeter@cookcountyil.gov"],
+        "cc":[]
+        },
+    "1326":{
+        "name":["Juvenile Probation"],
+        "office":["1326"],
+        "to":["amanda.boler@cookcountyil.gov"],
+        "cc":[]
+        },
+    "1440":{
+        "name":["Juvenile Temporary Detention Center"],
+        "office":["1440"],
+        "to":["tyrese.montgomery@cookcountyil.gov"],
+        "cc":[]
+        },
+    "test":{
+        "name":[],
+        "office":[],
+        "to":["nathan.smalley@cookcountyil.gov"],
+        "cc":[]
+        },
+    "custom":{
+        "name":[],
+        "office":[],
+        "to":["nathan.smalley@cookcountyil.gov"],
+        "cc":[]
+        }
+}
